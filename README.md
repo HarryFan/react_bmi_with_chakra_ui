@@ -27,7 +27,7 @@ React BMI 計算器
 git clone git@github.com:HarryFan/react_bmi_with_chakra_ui.git
 ```
 
-2.  進入項目目錄
+2.  進入專案目錄
     
 
 ```
