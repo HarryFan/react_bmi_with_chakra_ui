@@ -24,21 +24,21 @@ React BMI 計算器
     
 
 ```
-bashCopy codegit clone https://github.com/<YOUR\_USERNAME>/React\_BMI\_Calculator\_ChakraUI.git
+git clone https://github.com/<YOUR\_USERNAME>/React\_BMI\_Calculator\_ChakraUI.git
 ```
 
 2.  進入項目目錄
     
 
 ```
-bashCopy codecd React\_BMI\_Calculator_ChakraUI
+cd React\_BMI\_Calculator_ChakraUI
 ```
 
 3.  安裝依賴庫
     
 
 ```
-Copy codenpm install
+npm install
 ```
 
 4.  啟動應用程式
