@@ -31,7 +31,7 @@ git clone git@github.com:HarryFan/react_bmi_with_chakra_ui.git
     
 
 ```
-cd React\_BMI\_Calculator_ChakraUI
+cd React_BMI_Calculator_ChakraUI
 ```
 
 3.  安裝依賴庫
