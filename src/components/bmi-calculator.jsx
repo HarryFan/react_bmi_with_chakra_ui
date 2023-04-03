@@ -2,16 +2,18 @@ import { useState } from 'react';
 import { Box, Center, Flex, Heading, Stack, Text, Input, Button } from '@chakra-ui/react';
 
 function BMICalculator() {
+  // 使用 useState 儲存輸入的身高、體重、計算出來的 BMI 和 BMI 結果文字
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [bmi, setBMI] = useState(null);
   const [resultText, setResultText] = useState('');
 
-  const calculateBMI = () => {
-    const heightMeters = height / 100;
-    const bmiValue = weight / (heightMeters * heightMeters);
-    setBMI(bmiValue.toFixed(2));
+  const calculateBMI = () => { // 定義計算 BMI 的函式
+    const heightMeters = height / 100; // 把身高從公分換算成公尺
+    const bmiValue = weight / (heightMeters * heightMeters); // 計算 BMI 值
+    setBMI(bmiValue.toFixed(2)); // 將計算出的 BMI 值顯示到小數點後兩位
 
+    // 根據 BMI 值判斷體重狀態並顯示相應文字
     if (bmiValue < 18.5) {
       setResultText('體重過輕');
     } else if (bmiValue >= 18.5 && bmiValue < 24) {
@@ -27,6 +29,7 @@ function BMICalculator() {
     }
   };
 
+  // 返回渲染 BMI 計算器的 JSX
   return (
     <Box w="100%" maxW="480px" mx="auto" p={4}>
       <Center mb={8}>
