@@ -24,7 +24,7 @@ React BMI 計算器
     
 
 ```
-git clone https://github.com/<YOUR\_USERNAME>/React\_BMI\_Calculator\_ChakraUI.git
+git clone git@github.com:HarryFan/react_bmi_with_chakra_ui.git
 ```
 
 2.  進入項目目錄
