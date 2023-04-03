@@ -1,0 +1,2 @@
+# react_bmi_with_chakra_ui
+教學用，使用react搭配chakra ui實作BMI指數元件
