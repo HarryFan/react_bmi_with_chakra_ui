@@ -105,7 +105,7 @@ function InputPage({ height, setHeight, weight, setWeight, calculateBMI }) {
   );
 }
 
-// 輸入頁面元件
+// 結果頁面元件
 function ResultPage() {
   const location = useLocation();
   const { bmi, resultText, weightLoss } = location.state || {};
