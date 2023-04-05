@@ -20,11 +20,11 @@ React BMI 計算器
 安裝和執行
 -----
 
-1.  克隆這個項目到您的本地計算機
+1.  將此專案克隆到您的本地計算機
     
 
 ```
-git clone git@github.com:HarryFan/react_bmi_with_chakra_ui.git
+git clone git@github.com:HarryFan/react\_bmi\_with\_chakra\_ui.git
 ```
 
 2.  進入專案目錄
@@ -48,7 +48,7 @@ npm install
 npm run dev
 ```
 
-5.  打開瀏覽器，訪問 `http://localhost:3000` 即可看到應用程式。
+5.  打開瀏覽器，訪問 `http://localhost:5173` 即可看到應用程式。
     
 
 功能和特點
@@ -68,4 +68,4 @@ npm run dev
 結論
 --
 
-這是一個使用 React 和 Chakra UI 開發的 BMI 計算器，提供了簡潔的 UI 和功能。您可以通過閱讀這份技術文件和查看項目代碼來學習 React 和 Chakra UI 開發。此外，使用了 React Hooks 和 Chakra UI 等庫，這也為您提供了更多的選擇，以實現高質量的 UI 和功能。
+這是一個使用 React 和 Chakra UI 開發的 BMI 計算器，提供了簡潔的 UI 和功能。您可以通過閱讀這份技術文件和查看專案代碼來學習 React 和 Chakra UI 開發。此外，使用了 React Hooks 和 Chakra UI 等庫，這也為您提供了更多的選擇，以實現高質量的 UI 和功能。
