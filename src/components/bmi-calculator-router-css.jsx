@@ -120,7 +120,7 @@ function ResultPage() {
           {weightLoss && <p>需要減重 {weightLoss} 公斤</p>}
         </div>
       )}
-      <Link to="/">重新輸入</Link>
+      <Link to="/" className="button">重新輸入</Link>
     </div>
   );
 }

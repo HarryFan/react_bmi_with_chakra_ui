@@ -139,3 +139,19 @@ h1 {
 .result-page a:hover {
   background-color: #e2e8f0;
 }
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: #388e3c;
+}
