@@ -60,7 +60,7 @@ function BMICalculator() {
   return (
     <Box w="100%" maxW="480px" mx="auto" p={4}>
       <Center mb={8}>
-        <Heading size="lg">BMI 計算器</Heading>
+        <Heading size="lg">BMI 計算器 BMI with Chakra UI</Heading>
       </Center>
       <Flex justify="center">
         <Stack spacing={4} w="100%">
