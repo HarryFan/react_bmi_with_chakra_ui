@@ -1,19 +1,20 @@
-import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { useNavigate, useLocation } from "react-router-dom";
-import "./BMICalculator.css";
+import { useState } from "react"; // 引入 useState 元件
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"; // 引入 Router、Routes、Route、Link 元件
+import { useNavigate, useLocation } from "react-router-dom"; // 引入 useNavigate、useLocation 元件
+import "./BMICalculator.css"; // 引入 CSS 檔案
 
 // BMI 計算器主要元件
 function BMICalculator() {
-  const [height, setHeight] = useState("");
-  const [weight, setWeight] = useState("");
+  const [height, setHeight] = useState(""); // 身高
+  const [weight, setWeight] = useState(""); // 體重
 
+  // 計算 BMI
   const calculateBMI = () => {
-    const heightMeters = height / 100;
-    const bmiValue = weight / (heightMeters * heightMeters);
-    const calculatedBMI = bmiValue.toFixed(2);
-    let calculatedResultText = "";
-    let calculatedWeightLoss = null;
+    const heightMeters = height / 100; // 轉換成公尺
+    const bmiValue = weight / (heightMeters * heightMeters); // 計算 BMI 數值
+    const calculatedBMI = bmiValue.toFixed(2);// 計算 BMI 數值
+    let calculatedResultText = ""; // 體重狀況
+    let calculatedWeightLoss = null; // 減重數值
 
     // 根據 BMI 數值判斷體重狀況
     if (bmiValue < 18.5) {
@@ -21,10 +22,11 @@ function BMICalculator() {
     } else if (bmiValue >= 18.5 && bmiValue < 24) {
       calculatedResultText = "正常範圍";
     } else {
-      const maxNormalWeight = 24 * heightMeters * heightMeters;
-      const weightLossValue = parseFloat((weight - maxNormalWeight).toFixed(1));
-      calculatedWeightLoss = weightLossValue.toFixed(1);
+      const maxNormalWeight = 24 * heightMeters * heightMeters; // 正常體重上限
+      const weightLossValue = parseFloat((weight - maxNormalWeight).toFixed(1)); // 減重數值
+      calculatedWeightLoss = weightLossValue.toFixed(1); // 減重數值
 
+      // 根據 BMI 數值判斷體重狀況
       if (bmiValue >= 24 && bmiValue < 27) {
         calculatedResultText = `過重，您需要減掉約 ${weightLossValue} 公斤才能回到正常範圍`;
       } else if (bmiValue >= 27 && bmiValue < 30) {
@@ -36,17 +38,19 @@ function BMICalculator() {
       }
     }
 
+    // 回傳計算結果
     return {
-      bmi: calculatedBMI,
-      resultText: calculatedResultText,
-      weightLoss: calculatedWeightLoss,
+      bmi: calculatedBMI, // BMI 數值
+      resultText: calculatedResultText,  // 體重狀況
+      weightLoss: calculatedWeightLoss, // 減重數值
     };
   };
 
   return (
+    // 使用 Router 包住整個元件
     <Router>
-      <div className="bmi-calculator">
-        <Routes>
+      <div className="bmi-calculator">{/* 使用 Routes 元件包住所有路由 */}
+        <Routes>{/* 使用 Route 元件設定路由 */}
           <Route path="/result" element={<ResultPage />} />
           <Route
             path="/"
@@ -100,7 +104,7 @@ function InputPage({ height, setHeight, weight, setWeight, calculateBMI }) {
         </div>
         <button onClick={handleClick}>計算 BMI</button>
       </div>
-      <Link to="/result">查看結果</Link>
+      <Link to="/result">查看結果</Link> {/* 使用 Link 元件設定連結 */}
     </div>
   );
 }
@@ -120,7 +124,7 @@ function ResultPage() {
           {weightLoss && <p>需要減重 {weightLoss} 公斤</p>}
         </div>
       )}
-      <Link to="/" className="button">重新輸入</Link>
+      <Link to="/" className="button">重新輸入</Link> {/* 使用 Link 元件設定連結 */}
     </div>
   );
 }
